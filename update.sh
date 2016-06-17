@@ -304,6 +304,7 @@ then
   git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/98/198/1 && git cherry-pick FETCH_HEAD
   git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/99/199/1 && git cherry-pick FETCH_HEAD
   git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/00/200/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/04/204/1 && git cherry-pick FETCH_HEAD
   git push -f origin lp-5.1
 else
   echo 'no updates my friends!'
