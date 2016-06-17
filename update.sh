@@ -3,6 +3,56 @@
 git config --global user.name "Erik Castricum"
 git config --global user.email "erikcas1972@gmail.com"
 
+for DEVICE in yukon eagle flamingo seagull tianchi rhine amami honami togari castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire suzu
+do
+cd device_sony_$DEVICE
+git reset --hard
+git fetch sony
+if git checkout master &&
+    git fetch sony master &&
+    [ `git rev-list HEAD...sony/master --count` != 0 ]
+then
+  echo 'Sony N device update(s) detected! Lets pull changes!'
+  git checkout sony/master
+  git branch -D master
+  git checkout -b master
+  git branch -D n
+  git checkout -b n
+  git push -f origin n
+else
+  echo 'no updates my friends!'
+fi
+if git checkout master &&
+    git fetch sony master &&
+    [ `git rev-list HEAD...sony/master --count` != 0 ]
+then
+  echo 'Sony M device update(s) detected! Lets pull changes!'
+  git checkout sony/master
+  git branch -D master
+  git checkout -b master
+  git branch -D mm-6.0
+  git checkout -b mm-6.0
+  git push -f origin mm-6.0
+else
+  echo 'no updates my friends!'
+fi
+if git checkout l-mr1 &&
+    git fetch sony l-mr1 &&
+    [ `git rev-list HEAD...sony/l-mr1 --count` != 0 ]
+then
+  echo 'Sony L device update(s) detected! Lets pull changes!'
+  git checkout sony/l-mr1
+  git branch -D l-mr1
+  git checkout -b l-mr1
+  git branch -D lp-5.1
+  git checkout -b lp-5.1
+  git push -f origin lp-5.1
+else
+  echo 'no updates my friends!'
+fi
+cd ../
+done
+
 cd device_sony_common
 git reset --hard
 git fetch sony
@@ -18,7 +68,6 @@ then
   git checkout -b n
   git fetch https://review.sonyaosp.org/SonyAosp/device_sony_common refs/changes/88/188/1 && git cherry-pick FETCH_HEAD
   git push -f origin n
-  #git push -f gh n
 else
   echo 'no updates my friends!'
 fi
@@ -34,7 +83,6 @@ then
   git checkout -b mm-6.0
   git fetch https://review.sonyaosp.org/SonyAosp/device_sony_common refs/changes/87/187/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
-  #git push -f gh mm-6.0
 else
   echo 'no updates my friends!'
 fi
@@ -48,8 +96,8 @@ then
   git checkout -b l-mr1
   git branch -D lp-5.1
   git checkout -b lp-5.1
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_common refs/changes/01/201/1 && git cherry-pick FETCH_HEAD
   git push -f origin lp-5.1
-  #git push -f gh lp-5.1
 else
   echo 'no updates my friends!'
 fi
@@ -69,7 +117,6 @@ then
   git branch -D n
   git checkout -b n
   git push -f origin n
-  #git push -f gh n
 else
   echo 'no updates my friends!'
 fi
@@ -84,7 +131,6 @@ then
   git branch -D mm-6.0
   git checkout -b mm-6.0
   git push -f origin mm-6.0
-  #git push -f gh mm-6.0
 else
   echo 'no updates my friends!'
 fi
@@ -104,7 +150,6 @@ then
   git branch -D lp-5.1
   git checkout -b lp-5.1
   git push -f origin lp-5.1
-  #git push -f gh lp-5.1
 else
   echo 'no updates my friends!'
 fi
@@ -125,7 +170,6 @@ then
   git checkout -b n
   git fetch https://review.sonyaosp.org/SonyAosp/device_sony_shinano refs/changes/90/190/1 && git cherry-pick FETCH_HEAD
   git push -f origin n
-  #git push -f gh n
 else
   echo 'no updates my friends!'
 fi
@@ -141,7 +185,6 @@ then
   git checkout -b mm-6.0
   git fetch https://review.sonyaosp.org/SonyAosp/device_sony_shinano refs/changes/89/189/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
-  #git push -f gh mm-6.0
 else
   echo 'no updates my friends!'
 fi
@@ -155,61 +198,8 @@ then
   git checkout -b l-mr1
   git branch -D lp-5.1
   git checkout -b lp-5.1
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_shinano refs/changes/03/203/1 && git cherry-pick FETCH_HEAD
   git push -f origin lp-5.1
-  #git push -f gh lp-5.1
-else
-  echo 'no updates my friends!'
-fi
-cd ../
-
-for DEVICE in yukon eagle flamingo seagull tianchi rhine amami honami togari castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire suzu 
-
-do
-cd device_sony_$DEVICE
-git reset --hard
-git fetch sony
-if git checkout master &&
-    git fetch sony master &&
-    [ `git rev-list HEAD...sony/master --count` != 0 ]
-then
-  echo 'Sony N device update(s) detected! Lets pull changes!'
-  git checkout sony/master
-  git branch -D master
-  git checkout -b master
-  git branch -D n
-  git checkout -b n
-  git push -f origin n
-  #git push -f gh n
-else
-  echo 'no updates my friends!'
-fi
-if git checkout master &&
-    git fetch sony master &&
-    [ `git rev-list HEAD...sony/master --count` != 0 ]
-then
-  echo 'Sony M device update(s) detected! Lets pull changes!'
-  git checkout sony/master
-  git branch -D master
-  git checkout -b master
-  git branch -D mm-6.0
-  git checkout -b mm-6.0
-  git push -f origin mm-6.0
-  #git push -f gh mm-6.0
-else
-  echo 'no updates my friends!'
-fi
-if git checkout l-mr1 &&
-    git fetch sony l-mr1 &&
-    [ `git rev-list HEAD...sony/l-mr1 --count` != 0 ]
-then
-  echo 'Sony L device update(s) detected! Lets pull changes!'
-  git checkout sony/l-mr1
-  git branch -D l-mr1
-  git checkout -b l-mr1
-  git branch -D lp-5.1
-  git checkout -b lp-5.1
-  git push -f origin lp-5.1
-  #git push -f gh lp-5.1
 else
   echo 'no updates my friends!'
 fi
@@ -230,7 +220,6 @@ then
   git checkout -b n
   git fetch https://review.sonyaosp.org/SonyAosp/vendor_qcom_opensource_dataservices refs/changes/92/192/1 && git cherry-pick FETCH_HEAD
   git push -f origin n
-  #git push -f gh n
 else
   echo 'no updates my friends!'
 fi
@@ -246,7 +235,6 @@ then
   git checkout -b mm-6.0
   git fetch https://review.sonyaosp.org/SonyAosp/vendor_qcom_opensource_dataservices refs/changes/91/191/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
-  #git push -f gh mm-6.0
 else
   echo 'no updates my friends!'
 fi
@@ -260,8 +248,8 @@ then
   git checkout -b master
   git branch -D lp-5.1
   git checkout -b lp-5.1
+  git fetch https://review.sonyaosp.org/SonyAosp/vendor_qcom_opensource_dataservices refs/changes/02/202/1 && git cherry-pick FETCH_HEAD
   git push -f origin lp-5.1
-  #git push -f gh lp-5.1
 else
   echo 'no updates my friends!'
 fi
@@ -282,7 +270,6 @@ then
   git checkout -b n
   git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/95/195/1 && git cherry-pick FETCH_HEAD
   git push -f origin n
-  #git push -f gh n
 else
   echo 'no updates my friends!'
 fi
@@ -299,7 +286,6 @@ then
   git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/93/193/1 && git cherry-pick FETCH_HEAD
   git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/94/194/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
-  #git push -f gh mm-6.0
 else
   echo 'no updates my friends!'
 fi
@@ -313,10 +299,63 @@ then
   git checkout -b aosp/LA.BF64.1.1_rb1.27
   git branch -D lp-5.1
   git checkout -b lp-5.1
+  git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/96/196/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/97/197/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/98/198/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/99/199/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/00/200/1 && git cherry-pick FETCH_HEAD
   git push -f origin lp-5.1
-  #git push -f gh lp-5.1
 else
   echo 'no updates my friends!'
 fi
 cd ../
-done            
+
+cd kernel
+git fetch origin
+if git checkout origin/n &&
+    git fetch sony aosp/LA.BR.1.3.3_rb2.14 &&
+    [ `git rev-list HEAD...sony/aosp/LA.BR.1.3.3_rb2.14 --count` != 0 ]
+then
+  echo 'Sony N kernel updated! Lets pull changes!'
+  git fetch origin
+  git fetch sony
+  git checkout sony/aosp/LA.BR.1.3.3_rb2.14
+  git branch -D n
+  git checkout -b n
+  git fetch https://review.sonyaosp.org/kernel refs/changes/67/167/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/kernel refs/changes/68/168/1 && git cherry-pick FETCH_HEAD
+  git push -f origin n
+else
+  echo 'no updates my friends!'
+fi
+if git checkout origin/mm-6.0 &&
+    git fetch sony aosp/LA.BF64.1.2.2_rb4.7 &&
+    [ `git rev-list HEAD...sony/aosp/LA.BF64.1.2.2_rb4.7 --count` != 0 ]
+then
+  echo 'Sony M kernel updated! Lets pull changes!'
+  git fetch origin
+  git fetch sony
+  git checkout sony/aosp/LA.BF64.1.2.2_rb4.7
+  git branch -D mm-6.0
+  git checkout -b mm-6.0
+  git fetch https://review.sonyaosp.org/kernel refs/changes/67/167/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/kernel refs/changes/68/168/1 && git cherry-pick FETCH_HEAD
+  git push -f origin mm-6.0
+else
+  echo 'no updates my friends!'
+fi
+if git checkout origin/lp-5.1 &&
+    git fetch sony aosp/LA.BF64.1.1_rb1.27 &&
+    [ `git rev-list HEAD...sony/aosp/LA.BF64.1.1_rb1.27 --count` != 0 ]
+then
+  echo 'Sony L kernel updated! Lets pull changes!'
+  git checkout sony/aosp/LA.BF64.1.1_rb1.27
+  git branch -D lp-5.1
+  git checkout -b lp-5.1
+  git fetch https://review.sonyaosp.org/kernel refs/changes/67/167/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/kernel refs/changes/68/168/1 && git cherry-pick FETCH_HEAD
+  git push -f origin lp-5.1
+else
+  echo 'no updates my friends!'
+fi
+cd ../
