@@ -96,7 +96,7 @@ then
   git checkout -b l-mr1
   git branch -D lp-5.1
   git checkout -b lp-5.1
-  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_common refs/changes/01/201/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_common refs/changes/01/201/2 && git cherry-pick FETCH_HEAD
   git push -f origin lp-5.1
 else
   echo 'no updates my friends!'
