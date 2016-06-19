@@ -323,8 +323,8 @@ then
   git checkout sony/aosp/LA.BR.1.3.3_rb2.14
   git branch -D n
   git checkout -b n
-  git fetch https://review.sonyaosp.org/kernel refs/changes/67/167/1 && git cherry-pick FETCH_HEAD
-  git fetch https://review.sonyaosp.org/kernel refs/changes/68/168/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/07/207/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/08/208/1 && git cherry-pick FETCH_HEAD
   git push -f origin n
 else
   echo 'no updates my friends!'
@@ -339,8 +339,8 @@ then
   git checkout sony/aosp/LA.BF64.1.2.2_rb4.7
   git branch -D mm-6.0
   git checkout -b mm-6.0
-  git fetch https://review.sonyaosp.org/kernel refs/changes/67/167/1 && git cherry-pick FETCH_HEAD
-  git fetch https://review.sonyaosp.org/kernel refs/changes/68/168/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/07/207/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/08/208/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
 else
   echo 'no updates my friends!'
@@ -353,8 +353,8 @@ then
   git checkout sony/aosp/LA.BF64.1.1_rb1.27
   git branch -D lp-5.1
   git checkout -b lp-5.1
-  git fetch https://review.sonyaosp.org/kernel refs/changes/67/167/1 && git cherry-pick FETCH_HEAD
-  git fetch https://review.sonyaosp.org/kernel refs/changes/68/168/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/05/205/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/06/206/1 && git cherry-pick FETCH_HEAD
   git push -f origin lp-5.1
 else
   echo 'no updates my friends!'
