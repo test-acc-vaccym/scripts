@@ -312,15 +312,16 @@ fi
 cd ../
 
 cd kernel
-git fetch origin
-if git checkout origin/n &&
+git reset --hard
+git fetch sony
+if git checkout aosp/LA.BR.1.3.3_rb2.14 &&
     git fetch sony aosp/LA.BR.1.3.3_rb2.14 &&
     [ `git rev-list HEAD...sony/aosp/LA.BR.1.3.3_rb2.14 --count` != 0 ]
 then
   echo 'Sony N kernel updated! Lets pull changes!'
-  git fetch origin
-  git fetch sony
   git checkout sony/aosp/LA.BR.1.3.3_rb2.14
+  git branch -D aosp/LA.BR.1.3.3_rb2.14
+  git checkout -b aosp/LA.BR.1.3.3_rb2.14
   git branch -D n
   git checkout -b n
   git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/07/207/1 && git cherry-pick FETCH_HEAD
@@ -329,14 +330,14 @@ then
 else
   echo 'no updates my friends!'
 fi
-if git checkout origin/mm-6.0 &&
+if git checkout aosp/LA.BF64.1.2.2_rb4.7 &&
     git fetch sony aosp/LA.BF64.1.2.2_rb4.7 &&
     [ `git rev-list HEAD...sony/aosp/LA.BF64.1.2.2_rb4.7 --count` != 0 ]
 then
   echo 'Sony M kernel updated! Lets pull changes!'
-  git fetch origin
-  git fetch sony
   git checkout sony/aosp/LA.BF64.1.2.2_rb4.7
+  git branch -D aosp/LA.BF64.1.2.2_rb4.7
+  git checkout -b aosp/LA.BF64.1.2.2_rb4.7
   git branch -D mm-6.0
   git checkout -b mm-6.0
   git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/07/207/1 && git cherry-pick FETCH_HEAD
@@ -345,12 +346,14 @@ then
 else
   echo 'no updates my friends!'
 fi
-if git checkout origin/lp-5.1 &&
+if git checkout aosp/LA.BF64.1.1_rb1.27 &&
     git fetch sony aosp/LA.BF64.1.1_rb1.27 &&
     [ `git rev-list HEAD...sony/aosp/LA.BF64.1.1_rb1.27 --count` != 0 ]
 then
   echo 'Sony L kernel updated! Lets pull changes!'
   git checkout sony/aosp/LA.BF64.1.1_rb1.27
+  git branch -D aosp/LA.BF64.1.1_rb1.27
+  git checkout -b aosp/LA.BF64.1.1_rb1.27
   git branch -D lp-5.1
   git checkout -b lp-5.1
   git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/05/205/1 && git cherry-pick FETCH_HEAD
