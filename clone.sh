@@ -5,9 +5,19 @@ do
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/device_sony_$DEVICE && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg device_sony_$DEVICE/.git/hooks/
 done
 
+git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/device_sony_policy
+
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_qcom_camera
 
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/vendor_qcom_opensource_dataservices
+
+git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_sony_mkqcdtbootimg
+
+git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_sony_macaddrsetup
+
+git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_sony_timekeep
+
+git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_sony_thermanager
 
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/kernel
 
