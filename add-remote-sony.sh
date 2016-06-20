@@ -13,11 +13,6 @@ git remote add sony https://github.com/sonyxperiadev/device-sony-sepolicy.git
 git fetch sony
 cd ../
 
-cd device_qcom_sepolicy
-git remote add sony https://github.com/sonyxperiadev/device-qcom-sepolicy.git
-git fetch sony
-cd ../
-
 cd platform_hardware_qcom_camera
 git remote add sony https://github.com/sonyxperiadev/camera.git
 git fetch sony
