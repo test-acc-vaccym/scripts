@@ -207,6 +207,7 @@ then
   git checkout -b mm-6.0
   git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/93/193/1 && git cherry-pick FETCH_HEAD
   git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/94/194/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/09/209/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
 else
   echo 'no updates my friends!'
