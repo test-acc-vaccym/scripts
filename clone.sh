@@ -1,11 +1,10 @@
 #!/bin/bash
 
-for DEVICE in common yukon eagle flamingo seagull tianchi rhine amami honami togari shinano castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire suzu 
+for DEVICE in common yukon eagle flamingo seagull tianchi rhine amami honami togari shinano castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire suzu sepolicy
+
 do
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/device_sony_$DEVICE && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg device_sony_$DEVICE/.git/hooks/
 done
-
-git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/device_sony_policy
 
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_qcom_camera
 
