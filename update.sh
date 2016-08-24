@@ -22,14 +22,14 @@ then
 else
   echo 'no updates my friends!'
 fi
-if git checkout master &&
-    git fetch sony master &&
+if git checkout m-mr1 &&
+    git fetch sony m-mr1 &&
     [ `git rev-list HEAD...sony/master --count` != 0 ]
 then
   echo 'Sony M device update(s) detected! Lets pull changes!'
-  git checkout sony/master
-  git branch -D master
-  git checkout -b master
+  git checkout sony/m-mr1
+  git branch -D m-mr1
+  git checkout -b m-mr1
   git branch -D mm-6.0
   git checkout -b mm-6.0
   git push -f origin mm-6.0
@@ -125,14 +125,14 @@ then
 else
   echo 'no updates my friends!'
 fi
-if git checkout master &&
-    git fetch sony master &&
+if git checkout m-mr1 &&
+    git fetch sony m-mr1 &&
     [ `git rev-list HEAD...sony/master --count` != 0 ]
 then
   echo 'Sony M device update(s) detected! Lets pull changes!'
-  git checkout sony/master
-  git branch -D master
-  git checkout -b master
+  git checkout sony/m-mr1
+  git branch -D m-mr1
+  git checkout -b m-mr1
   git branch -D mm-6.0
   git checkout -b mm-6.0
   git fetch https://review.sonyaosp.org/SonyAosp/device_sony_shinano refs/changes/89/189/1 && git cherry-pick FETCH_HEAD
