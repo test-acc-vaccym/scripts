@@ -177,7 +177,7 @@ then
   git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/07/207/1 && git cherry-pick FETCH_HEAD
   git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/08/208/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
-  git push -F origin n
+  git push -f origin n
 else
   echo 'no updates my friends!'
 fi
