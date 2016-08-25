@@ -116,28 +116,16 @@ if git checkout master &&
     git fetch sony master &&
     [ `git rev-list HEAD...sony/master --count` != 0 ]
 then
-  echo 'Sony N device update(s) detected! Lets pull changes!'
+  echo 'Sony Master device update(s) detected! Lets pull changes!'
   git checkout sony/master
   git branch -D master
   git checkout -b master
   git branch -D n
+  git branch -D mm-6.0
   git checkout -b n
+  git checkout -b mm-6.0
   git fetch https://review.sonyaosp.org/SonyAosp/vendor_qcom_opensource_dataservices refs/changes/92/192/1 && git cherry-pick FETCH_HEAD
   git push -f origin n
-else
-  echo 'no updates my friends!'
-fi
-if git checkout master &&
-    git fetch sony master &&
-    [ `git rev-list HEAD...sony/master --count` != 0 ]
-then
-  echo 'Sony M device update(s) detected! Lets pull changes!'
-  git checkout sony/master
-  git branch -D master
-  git checkout -b master
-  git branch -D mm-6.0
-  git checkout -b mm-6.0
-  git fetch https://review.sonyaosp.org/SonyAosp/vendor_qcom_opensource_dataservices refs/changes/91/191/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
 else
   echo 'no updates my friends!'
@@ -151,30 +139,17 @@ if git checkout aosp/LA.BR.1.3.3_rb2.14 &&
     git fetch sony aosp/LA.BR.1.3.3_rb2.14 &&
     [ `git rev-list HEAD...sony/aosp/LA.BR.1.3.3_rb2.14 --count` != 0 ]
 then
-  echo 'Sony N device update(s) detected! Lets pull changes!'
+  echo 'Sony M and N device update(s) detected! Lets pull changes!'
   git checkout sony/aosp/LA.BR.1.3.3_rb2.14
   git branch -D aosp/LA.BR.1.3.3_rb2.14
   git checkout -b aosp/LA.BR.1.3.3_rb2.14
+  git branch -D mm-6.0
   git branch -D n
+  git checkout -b mm-6.0
   git checkout -b n
   git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/95/195/1 && git cherry-pick FETCH_HEAD
-  git push -f origin n
-else
-  echo 'no updates my friends!'
-fi
-if git checkout aosp/LA.BF64.1.2.2_rb4.7  &&
-    git fetch sony aosp/LA.BF64.1.2.2_rb4.7  &&
-    [ `git rev-list HEAD...sony/aosp/LA.BF64.1.2.2_rb4.7  --count` != 0 ]
-then
-  echo 'Sony M device update(s) detected! Lets pull changes!'
-  git checkout sony/aosp/LA.BF64.1.2.2_rb4.7 
-  git branch -D aosp/LA.BF64.1.2.2_rb4.7 
-  git checkout -b aosp/LA.BF64.1.2.2_rb4.7 
-  git branch -D mm-6.0
-  git checkout -b mm-6.0
-  git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/93/193/1 && git cherry-pick FETCH_HEAD
-  git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/94/194/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
+  git push -f origin n
 else
   echo 'no updates my friends!'
 fi
@@ -187,31 +162,18 @@ if git checkout aosp/LA.BR.1.3.3_rb2.14 &&
     git fetch sony aosp/LA.BR.1.3.3_rb2.14 &&
     [ `git rev-list HEAD...sony/aosp/LA.BR.1.3.3_rb2.14 --count` != 0 ]
 then
-  echo 'Sony N kernel updated! Lets pull changes!'
+  echo 'Sony M and N kernel updated! Lets pull changes!'
   git checkout sony/aosp/LA.BR.1.3.3_rb2.14
   git branch -D aosp/LA.BR.1.3.3_rb2.14
   git checkout -b aosp/LA.BR.1.3.3_rb2.14
+  git branch -D mm-6.0
   git branch -D n
+  git checkout -b mm-6.0
   git checkout -b n
   git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/07/207/1 && git cherry-pick FETCH_HEAD
   git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/08/208/1 && git cherry-pick FETCH_HEAD
-  git push -f origin n
-else
-  echo 'no updates my friends!'
-fi
-if git checkout aosp/LA.BF64.1.2.2_rb4.7 &&
-    git fetch sony aosp/LA.BF64.1.2.2_rb4.7 &&
-    [ `git rev-list HEAD...sony/aosp/LA.BF64.1.2.2_rb4.7 --count` != 0 ]
-then
-  echo 'Sony M kernel updated! Lets pull changes!'
-  git checkout sony/aosp/LA.BF64.1.2.2_rb4.7
-  git branch -D aosp/LA.BF64.1.2.2_rb4.7
-  git checkout -b aosp/LA.BF64.1.2.2_rb4.7
-  git branch -D mm-6.0
-  git checkout -b mm-6.0
-  git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/07/207/1 && git cherry-pick FETCH_HEAD
-  git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/08/208/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
+  git push -F origin n
 else
   echo 'no updates my friends!'
 fi
