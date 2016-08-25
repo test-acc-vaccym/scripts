@@ -123,6 +123,7 @@ then
   git branch -D n
   git branch -D mm-6.0
   git checkout -b n
+  git fetch https://review.sonyaosp.org/SonyAosp/vendor_qcom_opensource_dataservices refs/changes/92/192/1 && git cherry-pick FETCH_HEAD
   git checkout -b mm-6.0
   git fetch https://review.sonyaosp.org/SonyAosp/vendor_qcom_opensource_dataservices refs/changes/92/192/1 && git cherry-pick FETCH_HEAD
   git push -f origin n
@@ -146,6 +147,7 @@ then
   git branch -D mm-6.0
   git branch -D n
   git checkout -b mm-6.0
+  git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/95/195/1 && git cherry-pick FETCH_HEAD
   git checkout -b n
   git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/95/195/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
@@ -169,6 +171,8 @@ then
   git branch -D mm-6.0
   git branch -D n
   git checkout -b mm-6.0
+  git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/07/207/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/08/208/1 && git cherry-pick FETCH_HEAD
   git checkout -b n
   git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/07/207/1 && git cherry-pick FETCH_HEAD
   git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/08/208/1 && git cherry-pick FETCH_HEAD
