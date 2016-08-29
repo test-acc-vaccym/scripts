@@ -28,6 +28,11 @@ git remote add sony https://github.com/sonyxperiadev/thermanager.git
 git fetch sony
 cd ../
 
+cd platform_hardware_sony_init
+git remote add sony https://github.com/sonyxperiadev/device-sony-common-init.git
+git fetch sony
+cd ../
+
 cd platform_hardware_sony_macaddrsetup
 git remote add sony https://github.com/sonyxperiadev/macaddrsetup.git
 git fetch sony

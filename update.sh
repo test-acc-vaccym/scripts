@@ -157,6 +157,39 @@ else
 fi
 cd ../
 
+cd platform_hardware_sony_init
+git reset --hard
+git fetch sony
+if git checkout master &&
+    git fetch sony master &&
+    [ `git rev-list HEAD...sony/master --count` != 0 ]
+then
+  echo 'Sony N device update(s) detected! Lets pull changes!'
+  git checkout sony/master
+  git branch -D master
+  git checkout -b master
+  git branch -D n
+  git checkout -b n
+  git push -f origin n
+else
+  echo 'no updates my friends!'
+fi
+if git checkout m-mr1 &&
+    git fetch sony m-mr1 &&
+    [ `git rev-list HEAD...sony/m-mr1 --count` != 0 ]
+then
+  echo 'Sony M device update(s) detected! Lets pull changes!'
+  git checkout sony/m-mr1
+  git branch -D m-mr1
+  git checkout -b m-mr1
+  git branch -D mm-6.0
+  git checkout -b mm-6.0
+  git push -f origin mm-6.0
+else
+  echo 'no updates my friends!'
+fi
+cd ../
+
 cd kernel
 git reset --hard
 git fetch sony

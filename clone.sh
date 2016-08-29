@@ -12,6 +12,8 @@ git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/vendor_qcom_opensourc
 
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_sony_macaddrsetup
 
+git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_sony_init
+
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_sony_timekeep
 
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_sony_thermanager
