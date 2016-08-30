@@ -1,17 +1,12 @@
 #!/bin/bash
 
-for DEVICE in common rhine amami honami togari shinano castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire suzu
+for DEVICE in sepolicy common rhine amami honami togari shinano castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire suzu
 do
 cd device_sony_$DEVICE
 git remote add sony https://github.com/sonyxperiadev/device-sony-$DEVICE.git
 git fetch sony
 cd ../
 done
-
-cd device_sony_sepolicy
-git remote add sony https://github.com/sonyxperiadev/device-sony-sepolicy.git
-git fetch sony
-cd ../
 
 cd platform_hardware_qcom_camera
 git remote add sony https://github.com/sonyxperiadev/camera.git

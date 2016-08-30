@@ -3,7 +3,7 @@
 git config --global user.name "Erik Castricum"
 git config --global user.email "erikcas1972@gmail.com"
 
-for DEVICE in rhine amami honami togari castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire suzu sepolicy
+for DEVICE in sepolicy rhine amami honami togari castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire suzu
 do
 cd device_sony_$DEVICE
 git reset --hard
