@@ -215,3 +215,54 @@ else
   echo 'no updates my friends!'
 fi
 cd ../
+
+cd platform_hardware_sony_timekeep
+git reset --hard
+git fetch sony
+if git checkout master &&
+    git fetch sony master &&
+    [ `git rev-list HEAD...sony/master --count` != 0 ]
+then
+  echo 'Sony Master device update(s) detected! Lets pull changes!'
+  git checkout sony/master
+  git branch -D master
+  git checkout -b master
+  git push -f origin master
+else
+  echo 'no updates my friends!'
+fi
+cd ../
+
+cd platform_hardware_sony_thermanager
+git reset --hard
+git fetch sony
+if git checkout master &&
+    git fetch sony master &&
+    [ `git rev-list HEAD...sony/master --count` != 0 ]
+then
+  echo 'Sony Master device update(s) detected! Lets pull changes!'
+  git checkout sony/master
+  git branch -D master
+  git checkout -b master
+  git push -f origin master
+else
+  echo 'no updates my friends!'
+fi
+cd ../
+
+cd platform_hardware_sony_macaddrsetup
+git reset --hard
+git fetch sony
+if git checkout master &&
+    git fetch sony master &&
+    [ `git rev-list HEAD...sony/master --count` != 0 ]
+then
+  echo 'Sony Master device update(s) detected! Lets pull changes!'
+  git checkout sony/master
+  git branch -D master
+  git checkout -b master
+  git push -f origin master
+else
+  echo 'no updates my friends!'
+fi
+cd ../
