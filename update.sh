@@ -24,7 +24,7 @@ else
 fi
 if git checkout m-mr1 &&
     git fetch sony m-mr1 &&
-    [ `git rev-list HEAD...sony/master --count` != 0 ]
+    [ `git rev-list HEAD...sony/m-mr1 --count` != 0 ]
 then
   echo 'Sony M device update(s) detected! Lets pull changes!'
   git checkout sony/m-mr1
@@ -94,7 +94,7 @@ else
 fi
 if git checkout m-mr1 &&
     git fetch sony m-mr1 &&
-    [ `git rev-list HEAD...sony/master --count` != 0 ]
+    [ `git rev-list HEAD...sony/m-mr1 --count` != 0 ]
 then
   echo 'Sony M device update(s) detected! Lets pull changes!'
   git checkout sony/m-mr1
