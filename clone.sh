@@ -16,6 +16,8 @@ git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_son
 
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_sony_timekeep
 
+git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_packages_apps_ExtendedSettings
+
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_sony_thermanager
 
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/kernel

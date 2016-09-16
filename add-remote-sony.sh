@@ -38,6 +38,11 @@ git remote add sony https://github.com/sonyxperiadev/timekeep.git
 git fetch sony
 cd ../
 
+cd platform_packages_apps_ExtendedSettings
+git remote add sony https://github.com/sonyxperiadev/packages_apps_ExtendedSettings.git
+git fetch sony
+cd ../
+
 cd kernel
 git remote add sony https://github.com/sonyxperiadev/kernel.git
 git fetch sony
