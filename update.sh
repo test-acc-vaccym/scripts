@@ -52,7 +52,6 @@ then
   git checkout -b master
   git branch -D n
   git checkout -b n
-  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_common refs/changes/88/188/1 && git cherry-pick FETCH_HEAD
   git push -f origin n
 else
   echo 'no updates my friends!'
@@ -67,7 +66,6 @@ then
   git checkout -b m-mr1
   git branch -D mm-6.0
   git checkout -b mm-6.0
-  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_common refs/changes/87/187/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
 else
   echo 'no updates my friends!'
