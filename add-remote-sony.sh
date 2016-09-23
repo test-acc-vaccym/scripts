@@ -43,6 +43,16 @@ git remote add sony https://github.com/sonyxperiadev/packages_apps_ExtendedSetti
 git fetch sony
 cd ../
 
+cd platform_packages_apps_FMRadio
+git remote add sony https://github.com/sonyxperiadev/packages-apps-FMRadio.git
+git fetch sony
+cd ../
+
+cd platform_hardware_qcom_fm
+git remote add sony https://github.com/sonyxperiadev/vendor-qcom-opensource-fm.git
+git fetch sony
+cd ../
+
 cd kernel
 git remote add sony https://github.com/sonyxperiadev/kernel.git
 git fetch sony
