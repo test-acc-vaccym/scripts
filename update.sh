@@ -3,7 +3,7 @@
 git config --global user.name "Erik Castricum"
 git config --global user.email "erikcas1972@gmail.com"
 
-for DEVICE in common sepolicy rhine amami honami togari castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire kugo suzu
+for DEVICE in common sepolicy rhine amami honami togari shinano castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire kugo suzu
 do
 cd device_sony_$DEVICE
 git reset --hard
@@ -38,41 +38,6 @@ else
 fi
 cd ../
 done
-
-cd device_sony_shinano
-git reset --hard
-git fetch sony
-if git checkout master &&
-    git fetch sony master &&
-    [ `git rev-list HEAD...sony/master --count` != 0 ]
-then
-  echo 'Sony N device update(s) detected! Lets pull changes!'
-  git checkout sony/master
-  git branch -D master
-  git checkout -b master
-  git branch -D n
-  git checkout -b n
-  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_shinano refs/changes/00/300/1 && git cherry-pick FETCH_HEAD
-  git push -f origin n
-else
-  echo 'no updates my friends!'
-fi
-if git checkout m-mr1 &&
-    git fetch sony m-mr1 &&
-    [ `git rev-list HEAD...sony/m-mr1 --count` != 0 ]
-then
-  echo 'Sony M device update(s) detected! Lets pull changes!'
-  git checkout sony/m-mr1
-  git branch -D m-mr1
-  git checkout -b m-mr1
-  git branch -D mm-6.0
-  git checkout -b mm-6.0
-  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_shinano refs/changes/00/300/1 && git cherry-pick FETCH_HEAD
-  git push -f origin mm-6.0
-else
-  echo 'no updates my friends!'
-fi
-cd ../
 
 cd vendor_qcom_opensource_dataservices
 git reset --hard
@@ -169,7 +134,6 @@ then
   git branch -D mm-6.0
   git branch -D n
   git checkout -b mm-6.0
-  git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/07/207/1 && git cherry-pick FETCH_HEAD
   git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/08/208/1 && git cherry-pick FETCH_HEAD
   git checkout -b n
   git push -f origin mm-6.0
