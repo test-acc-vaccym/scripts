@@ -53,9 +53,7 @@ then
   git branch -D n
   git branch -D mm-6.0
   git checkout -b n
-  git fetch https://review.sonyaosp.org/SonyAosp/vendor_qcom_opensource_dataservices refs/changes/92/192/1 && git cherry-pick FETCH_HEAD
   git checkout -b mm-6.0
-  git fetch https://review.sonyaosp.org/SonyAosp/vendor_qcom_opensource_dataservices refs/changes/92/192/1 && git cherry-pick FETCH_HEAD
   git push -f origin n
   git push -f origin mm-6.0
 else
