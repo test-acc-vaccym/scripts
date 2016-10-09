@@ -75,9 +75,7 @@ then
   git branch -D mm-6.0
   git branch -D n
   git checkout -b mm-6.0
-  git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/95/195/1 && git cherry-pick FETCH_HEAD
   git checkout -b n
-  git fetch https://review.sonyaosp.org/SonyAosp/platform_hardware_qcom_camera refs/changes/95/195/1 && git cherry-pick FETCH_HEAD
   git push -f origin mm-6.0
   git push -f origin n
 else
