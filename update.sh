@@ -130,7 +130,6 @@ then
   git branch -D mm-6.0
   git branch -D n
   git checkout -b mm-6.0
-  git fetch https://review.sonyaosp.org/SonyAosp/kernel refs/changes/08/208/1 && git cherry-pick FETCH_HEAD
   git checkout -b n
   git push -f origin mm-6.0
   git push -f origin n
