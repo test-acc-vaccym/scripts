@@ -8,18 +8,23 @@ git fetch sony
 cd ../
 done
 
+cd kernel
+git remote add sony https://github.com/sonyxperiadev/kernel.git
+git fetch sony
+cd ../
+
 cd platform_hardware_qcom_camera
 git remote add sony https://github.com/sonyxperiadev/camera.git
 git fetch sony
 cd ../
 
-cd vendor_qcom_opensource_dataservices
-git remote add sony https://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices.git
+cd platform_hardware_qcom_fm
+git remote add sony https://github.com/sonyxperiadev/vendor-qcom-opensource-fm.git
 git fetch sony
 cd ../
 
-cd platform_hardware_sony_thermanager
-git remote add sony https://github.com/sonyxperiadev/thermanager.git
+cd platform_hardware_sony_dataservices
+git remote add sony https://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices.git
 git fetch sony
 cd ../
 
@@ -30,6 +35,11 @@ cd ../
 
 cd platform_hardware_sony_macaddrsetup
 git remote add sony https://github.com/sonyxperiadev/macaddrsetup.git
+git fetch sony
+cd ../
+
+cd platform_hardware_sony_thermanager
+git remote add sony https://github.com/sonyxperiadev/thermanager.git
 git fetch sony
 cd ../
 
@@ -45,15 +55,5 @@ cd ../
 
 cd platform_packages_apps_FMRadio
 git remote add sony https://github.com/sonyxperiadev/packages-apps-FMRadio.git
-git fetch sony
-cd ../
-
-cd platform_hardware_qcom_fm
-git remote add sony https://github.com/sonyxperiadev/vendor-qcom-opensource-fm.git
-git fetch sony
-cd ../
-
-cd kernel
-git remote add sony https://github.com/sonyxperiadev/kernel.git
 git fetch sony
 cd ../
