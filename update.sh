@@ -14,6 +14,8 @@ if git checkout m-mr1 &&
 then
   echo 'device update(s) detected! Lets pull changes!'
   git checkout sony/m-mr1
+  git branch -D m-mr1
+  git checkout -b m-mr1
   git branch -D android-6.0
   git checkout -b android-6.0
   git push -f origin android-6.0
@@ -26,6 +28,8 @@ if git checkout n-mr0 &&
 then
   echo 'device update(s) detected! Lets pull changes!'
   git checkout sony/n-mr0
+  git branch -D n-mr0
+  git checkout -b n-mr0
   git branch -D android-7.0
   git checkout -b android-7.0
   git push -f origin android-7.0
@@ -38,6 +42,8 @@ if git checkout master &&
 then
   echo 'device update(s) detected! Lets pull changes!'
   git checkout sony/master
+  git branch -D master
+  git checkout -b master
   git branch -D android-7.1
   git checkout -b android-7.1
   git push -f origin android-7.1
@@ -56,6 +62,8 @@ if git checkout aosp/LA.BR.1.3.3_rb2.14 &&
 then
   echo 'kernel update(s) detected! Lets pull changes!'
   git checkout sony/aosp/LA.BR.1.3.3_rb2.14
+  git branch -D aosp/LA.BR.1.3.3_rb2.14
+  git checkout -b aosp/LA.BR.1.3.3_rb2.14
   git branch -D android-6.0
   git branch -D android-7.0
   git checkout -b android-6.0
@@ -71,6 +79,8 @@ if git checkout aosp/LA.UM.5.5.r1 &&
 then
   echo 'kernel update(s) detected! Lets pull changes!'
   git checkout sony/aosp/LA.UM.5.5.r1
+  git branch -D aosp/LA.UM.5.5.r1
+  git checkout -b aosp/LA.UM.5.5.r1
   git branch -D android-7.1
   git checkout -b android-7.1
   git push -f origin android-7.1
@@ -88,6 +98,8 @@ if git checkout aosp/LA.BR.1.3.3_rb2.14 &&
 then
   echo 'camera update(s) detected! Lets pull changes!'
   git checkout sony/aosp/LA.BR.1.3.3_rb2.14
+  git branch -D aosp/LA.BR.1.3.3_rb2.14
+  git checkout -b aosp/LA.BR.1.3.3_rb2.14
   git branch -D android-6.0
   git branch -D android-7.0
   git checkout -b android-6.0
@@ -103,6 +115,8 @@ if git checkout aosp/LA.UM.5.5.r1 &&
 then
   echo 'camera update(s) detected! Lets pull changes!'
   git checkout sony/aosp/LA.UM.5.5.r1
+  git branch -D aosp/LA.UM.5.5.r1
+  git checkout -b aosp/LA.UM.5.5.r1
   git branch -D android-7.1
   git checkout -b android-7.1
   git push -f origin android-7.1
@@ -154,6 +168,8 @@ if git checkout m-mr1 &&
 then
   echo 'recovery update(s) detected! Lets pull changes!'
   git checkout sony/m-mr1
+  git branch -D m-mr1
+  git checkout -b m-mr1
   git branch -D android-6.0
   git checkout -b android-6.0
   git push -f origin android-6.0
@@ -166,6 +182,8 @@ if git checkout master &&
 then
   echo 'recovery update(s) detected! Lets pull changes!'
   git checkout sony/master
+  git branch -D master
+  git checkout -b master
   git branch -D android-7.0
   git branch -D android-7.1
   git checkout -b android-7.0
