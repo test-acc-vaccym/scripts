@@ -23,6 +23,11 @@ git remote add sony https://github.com/sonyxperiadev/vendor-qcom-opensource-fm.g
 git fetch sony
 cd ../
 
+cd platform_hardware_qcom_location
+git remote add sony https://github.com/sonyxperiadev/vendor-qcom-opensource-location.git
+git fetch sony
+cd ../
+
 cd platform_hardware_sony_dataservices
 git remote add sony https://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices.git
 git fetch sony

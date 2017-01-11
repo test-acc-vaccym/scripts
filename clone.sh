@@ -11,6 +11,8 @@ git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_qco
 
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_qcom_fm
 
+git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_qcom_location
+
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_sony_dataservices
 
 git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/platform_hardware_sony_init
