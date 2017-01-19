@@ -65,7 +65,8 @@ then
   git checkout -b master
   git branch -D android-7.1-legacy
   git checkout -b android-7.1-legacy
-  git cherry-pick f865cb77a16b9f462933e79c93098385ffbc4951 a41bcb4b6873fe8f97b6438af034bf20cb088d4f
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_common refs/changes/92/492/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_common refs/changes/93/493/1 && git cherry-pick FETCH_HEAD
   git push -f origin android-7.1-legacy
 else
   echo 'no updates my friends!'
@@ -88,7 +89,7 @@ then
   git checkout -b master
   git branch -D android-7.1-legacy
   git checkout -b android-7.1-legacy
-  git cherry-pick 41797aa06f9a0b98c438e798b54e91bb6d098ae7
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_kanuti refs/changes/94/494/1 && git cherry-pick FETCH_HEAD
   git push -f origin android-7.1-legacy
 else
   echo 'no updates my friends!'
@@ -111,7 +112,7 @@ then
   git checkout -b master
   git branch -D android-7.1-legacy
   git checkout -b android-7.1-legacy
-  git cherry-pick 0d98f2e4150c1d7e7e3fad1c8e57c31c447f3d28
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_kitakami refs/changes/95/495/1 && git cherry-pick FETCH_HEAD
   git push -f origin android-7.1-legacy
 else
   echo 'no updates my friends!'
@@ -134,7 +135,9 @@ then
   git checkout -b master
   git branch -D android-7.1-legacy
   git checkout -b android-7.1-legacy
-  git cherry-pick f5cf46416e0c5ee3994fe5990de7ad91f4bc8db9 229c2c3ce6506f6c2f70a169b7b9d375069bad9c 7eb21f67ad1a470428e8723ddc78c0946198632c
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_loire refs/changes/96/496/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_loire refs/changes/97/497/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_loire refs/changes/98/498/1 && git cherry-pick FETCH_HEAD
   git push -f origin android-7.1-legacy
 else
   echo 'no updates my friends!'
@@ -157,7 +160,7 @@ then
   git checkout -b master
   git branch -D android-7.1-legacy
   git checkout -b android-7.1-legacy
-  git cherry-pick 3895394f1094cd67eed3c5e3639180dc04c9d730
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_rhine refs/changes/37/437/2 && git cherry-pick FETCH_HEAD
   git push -f origin android-7.1-legacy
 else
   echo 'no updates my friends!'
@@ -180,7 +183,7 @@ then
   git checkout -b master
   git branch -D android-7.1-legacy
   git checkout -b android-7.1-legacy
-  git cherry-pick 6deb057fea4b07c3867c86c25f6831320eda4fac
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_shinano refs/changes/36/436/2 && git cherry-pick FETCH_HEAD
   git push -f origin android-7.1-legacy
 else
   echo 'no updates my friends!'
