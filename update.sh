@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for DEVICE in common sepolicy amami honami togari castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire kugo suzu tone dora kagura
+for DEVICE in common sepolicy rhine amami honami togari shinano castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire kugo suzu tone dora kagura
 do
 cd device_sony_$DEVICE
 git reset --hard
@@ -50,37 +50,11 @@ fi
 cd ../
 done
 
-cd device_sony_rhine
+for COMMON in common
+do
+cd device_sony_$COMMON
 git reset --hard
 git fetch sony
-if git checkout m-mr1 &&
-    git fetch sony m-mr1 &&
-    [ `git rev-list HEAD...sony/m-mr1 --count` != 0 ]
-then
-  echo 'device update(s) detected! Lets pull changes!'
-  git checkout sony/m-mr1
-  git branch -D m-mr1
-  git checkout -b m-mr1
-  git branch -D android-6.0
-  git checkout -b android-6.0
-  git push -f origin android-6.0
-else
-  echo 'no updates my friends!'
-fi
-if git checkout n-mr0 &&
-    git fetch sony n-mr0 &&
-    [ `git rev-list HEAD...sony/n-mr0 --count` != 0 ]
-then
-  echo 'device update(s) detected! Lets pull changes!'
-  git checkout sony/n-mr0
-  git branch -D n-mr0
-  git checkout -b n-mr0
-  git branch -D android-7.0
-  git checkout -b android-7.0
-  git push -f origin android-7.0
-else
-  echo 'no updates my friends!'
-fi
 if git checkout master &&
     git fetch sony master &&
     [ `git rev-list HEAD...sony/master --count` != 0 ]
@@ -89,46 +63,21 @@ then
   git checkout sony/master
   git branch -D master
   git checkout -b master
-  git branch -D android-7.1
-  git checkout -b android-7.1
-  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_rhine refs/changes/37/437/1 && git cherry-pick FETCH_HEAD
-  git push -f origin android-7.1
+  git branch -D android-7.1-legacy
+  git checkout -b android-7.1-legacy
+  git cherry-pick f865cb77a16b9f462933e79c93098385ffbc4951 a41bcb4b6873fe8f97b6438af034bf20cb088d4f
+  git push -f origin android-7.1-legacy
 else
   echo 'no updates my friends!'
 fi
 cd ../
+done
 
-cd device_sony_shinano
+for KANUTI in kanuti
+do
+cd device_sony_$KANUTI
 git reset --hard
 git fetch sony
-if git checkout m-mr1 &&
-    git fetch sony m-mr1 &&
-    [ `git rev-list HEAD...sony/m-mr1 --count` != 0 ]
-then
-  echo 'device update(s) detected! Lets pull changes!'
-  git checkout sony/m-mr1
-  git branch -D m-mr1
-  git checkout -b m-mr1
-  git branch -D android-6.0
-  git checkout -b android-6.0
-  git push -f origin android-6.0
-else
-  echo 'no updates my friends!'
-fi
-if git checkout n-mr0 &&
-    git fetch sony n-mr0 &&
-    [ `git rev-list HEAD...sony/n-mr0 --count` != 0 ]
-then
-  echo 'device update(s) detected! Lets pull changes!'
-  git checkout sony/n-mr0
-  git branch -D n-mr0
-  git checkout -b n-mr0
-  git branch -D android-7.0
-  git checkout -b android-7.0
-  git push -f origin android-7.0
-else
-  echo 'no updates my friends!'
-fi
 if git checkout master &&
     git fetch sony master &&
     [ `git rev-list HEAD...sony/master --count` != 0 ]
@@ -137,14 +86,107 @@ then
   git checkout sony/master
   git branch -D master
   git checkout -b master
-  git branch -D android-7.1
-  git checkout -b android-7.1
-  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_shinano refs/changes/36/436/1 && git cherry-pick FETCH_HEAD
-  git push -f origin android-7.1
+  git branch -D android-7.1-legacy
+  git checkout -b android-7.1-legacy
+  git cherry-pick 41797aa06f9a0b98c438e798b54e91bb6d098ae7
+  git push -f origin android-7.1-legacy
 else
   echo 'no updates my friends!'
 fi
 cd ../
+done
+
+for KITAKAMI in kitakami
+do
+cd device_sony_$KITAKAMI
+git reset --hard
+git fetch sony
+if git checkout master &&
+    git fetch sony master &&
+    [ `git rev-list HEAD...sony/master --count` != 0 ]
+then
+  echo 'device update(s) detected! Lets pull changes!'
+  git checkout sony/master
+  git branch -D master
+  git checkout -b master
+  git branch -D android-7.1-legacy
+  git checkout -b android-7.1-legacy
+  git cherry-pick 0d98f2e4150c1d7e7e3fad1c8e57c31c447f3d28
+  git push -f origin android-7.1-legacy
+else
+  echo 'no updates my friends!'
+fi
+cd ../
+done
+
+for LOIRE in loire
+do
+cd device_sony_$LOIRE
+git reset --hard
+git fetch sony
+if git checkout master &&
+    git fetch sony master &&
+    [ `git rev-list HEAD...sony/master --count` != 0 ]
+then
+  echo 'device update(s) detected! Lets pull changes!'
+  git checkout sony/master
+  git branch -D master
+  git checkout -b master
+  git branch -D android-7.1-legacy
+  git checkout -b android-7.1-legacy
+  git cherry-pick f5cf46416e0c5ee3994fe5990de7ad91f4bc8db9 229c2c3ce6506f6c2f70a169b7b9d375069bad9c 7eb21f67ad1a470428e8723ddc78c0946198632c
+  git push -f origin android-7.1-legacy
+else
+  echo 'no updates my friends!'
+fi
+cd ../
+done
+
+for RHINE in rhine
+do
+cd device_sony_$RHINE
+git reset --hard
+git fetch sony
+if git checkout master &&
+    git fetch sony master &&
+    [ `git rev-list HEAD...sony/master --count` != 0 ]
+then
+  echo 'device update(s) detected! Lets pull changes!'
+  git checkout sony/master
+  git branch -D master
+  git checkout -b master
+  git branch -D android-7.1-legacy
+  git checkout -b android-7.1-legacy
+  git cherry-pick 3895394f1094cd67eed3c5e3639180dc04c9d730
+  git push -f origin android-7.1-legacy
+else
+  echo 'no updates my friends!'
+fi
+cd ../
+done
+
+for SHINANO in shinano
+do
+cd device_sony_$SHINANO
+git reset --hard
+git fetch sony
+if git checkout master &&
+    git fetch sony master &&
+    [ `git rev-list HEAD...sony/master --count` != 0 ]
+then
+  echo 'device update(s) detected! Lets pull changes!'
+  git checkout sony/master
+  git branch -D master
+  git checkout -b master
+  git branch -D android-7.1-legacy
+  git checkout -b android-7.1-legacy
+  git cherry-pick 6deb057fea4b07c3867c86c25f6831320eda4fac
+  git push -f origin android-7.1-legacy
+else
+  echo 'no updates my friends!'
+fi
+cd ../
+done
 
 cd kernel
 git reset --hard
