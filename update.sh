@@ -67,6 +67,7 @@ then
   git checkout -b android-7.1-legacy
   git fetch https://review.sonyaosp.org/SonyAosp/device_sony_common refs/changes/92/492/1 && git cherry-pick FETCH_HEAD
   git fetch https://review.sonyaosp.org/SonyAosp/device_sony_common refs/changes/93/493/1 && git cherry-pick FETCH_HEAD
+  git fetch https://review.sonyaosp.org/SonyAosp/device_sony_common refs/changes/99/499/1 && git cherry-pick FETCH_HEAD
   git push -f origin android-7.1-legacy
 else
   echo 'no updates my friends!'
