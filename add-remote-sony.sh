@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for DEVICE in sepolicy common rhine amami honami togari shinano castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire kugo suzu tone dora kagura
+for DEVICE in sepolicy common rhine amami honami togari shinano castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire kugo suzu tone dora kagura keyaki
 do
 cd device_sony_$DEVICE
 git remote add sony https://github.com/sonyxperiadev/device-sony-$DEVICE.git
