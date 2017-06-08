@@ -34,9 +34,7 @@ then
   git checkout sony/aosp/LA.UM.5.7.r1
   git branch -D aosp/LA.UM.5.7.r1
   git checkout -b aosp/LA.UM.5.7.r1
-  git branch -D android-7.1-4.4
-  git checkout -b android-7.1-4.4
-  git push -f origin android-7.1-4.4
+  git push -f origin aosp/LA.UM.5.7.r1
 else
   echo 'no updates my friends!'
 fi
@@ -53,9 +51,7 @@ then
   git checkout sony/aosp/LA.UM.5.7.r1
   git branch -D aosp/LA.UM.5.7.r1
   git checkout -b aosp/LA.UM.5.7.r1
-  git branch -D android-7.1-4.4
-  git checkout -b android-7.1-4.4
-  git push -f origin android-7.1-4.4
+  git push -f origin aosp/LA.UM.5.7.r1
 else
   echo 'no updates my friends!'
 fi

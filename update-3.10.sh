@@ -63,15 +63,7 @@ then
   git checkout sony/aosp/LA.BR.1.3.3_rb2.14
   git branch -D aosp/LA.BR.1.3.3_rb2.14
   git checkout -b aosp/LA.BR.1.3.3_rb2.14
-  git branch -D android-6.0
-  git branch -D android-7.0
-  git branch -D android-7.1-3.10
-  git checkout -b android-6.0
-  git checkout -b android-7.0
-  git checkout -b android-7.1-3.10
-  git push -f origin android-6.0
-  git push -f origin android-7.0
-  git push -f origin android-7.1-3.10
+  git push -f origin aosp/LA.BR.1.3.3_rb2.14
 else
   echo 'no updates my friends!'
 fi
@@ -88,15 +80,7 @@ then
   git checkout sony/aosp/LA.BR.1.3.3_rb2.14
   git branch -D aosp/LA.BR.1.3.3_rb2.14
   git checkout -b aosp/LA.BR.1.3.3_rb2.14
-  git branch -D android-6.0
-  git branch -D android-7.0
-  git branch -D android-7.1-3.10
-  git checkout -b android-6.0
-  git checkout -b android-7.0
-  git checkout -b android-7.1-3.10
-  git push -f origin android-6.0
-  git push -f origin android-7.0
-  git push -f origin android-7.1-3.10
+  git push -f origin aosp/LA.BR.1.3.3_rb2.14
 else
   echo 'no updates my friends!'
 fi
