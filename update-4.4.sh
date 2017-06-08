@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd 4.4
 for DEVICE in sepolicy common loire kugo suzu tone dora kagura keyaki
 do
 cd device_sony_$DEVICE
@@ -77,4 +78,6 @@ then
 else
   echo 'no updates my friends!'
 fi
+cd ../
+
 cd ../

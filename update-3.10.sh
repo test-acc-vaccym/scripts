@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd 3.10
+
 for DEVICE in sepolicy common rhine amami honami togari shinano castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran loire kugo suzu
 do
 cd device_sony_$DEVICE
@@ -145,4 +147,6 @@ then
 else
   echo 'no updates my friends!'
 fi
+cd ../
+
 cd ../
