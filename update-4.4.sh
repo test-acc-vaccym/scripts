@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd 4.4
-for DEVICE in sepolicy common loire kugo suzu tone dora kagura keyaki
+for DEVICE in sepolicy common loire kugo suzu tone dora kagura keyaki yoshino maple
 do
 cd device_sony_$DEVICE
 git reset --hard
