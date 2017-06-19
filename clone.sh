@@ -153,6 +153,11 @@ done
 ### A D D  R E M O T E S ###
 ############################
 
+cd platform_hardware_broadcom_fm
+git remote add sony https://github.com/sonyxperiadev/vendor-broadcom-bt-fm.git
+git fetch sony
+cd ../
+
 cd platform_hardware_qcom_fm
 git remote add sony https://github.com/sonyxperiadev/vendor-qcom-opensource-fm.git
 git fetch sony
@@ -165,6 +170,11 @@ cd ../
 
 cd platform_hardware_sony_dataservices
 git remote add sony https://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices.git
+git fetch sony
+cd ../
+
+cd platform_hardware_sony_fingerprint
+git remote add sony https://github.com/sonyxperiadev/vendor-sony-oss-fingerprint.git
 git fetch sony
 cd ../
 
