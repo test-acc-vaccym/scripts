@@ -7,34 +7,6 @@ do
 cd device_sony_$DEVICE
 git reset --hard
 git fetch sony
-if git checkout m-mr1 &&
-    git fetch sony m-mr1 &&
-    [ `git rev-list HEAD...sony/m-mr1 --count` != 0 ]
-then
-  echo 'device update(s) detected! Lets pull changes!'
-  git checkout sony/m-mr1
-  git branch -D m-mr1
-  git checkout -b m-mr1
-  git branch -D android-6.0
-  git checkout -b android-6.0
-  git push -f origin android-6.0
-else
-  echo 'no updates my friends!'
-fi
-if git checkout n-mr0 &&
-    git fetch sony n-mr0 &&
-    [ `git rev-list HEAD...sony/n-mr0 --count` != 0 ]
-then
-  echo 'device update(s) detected! Lets pull changes!'
-  git checkout sony/n-mr0
-  git branch -D n-mr0
-  git checkout -b n-mr0
-  git branch -D android-7.0
-  git checkout -b android-7.0
-  git push -f origin android-7.0
-else
-  echo 'no updates my friends!'
-fi
 if git checkout n-mr1 &&
     git fetch sony n-mr1 &&
     [ `git rev-list HEAD...sony/n-mr1 --count` != 0 ]
@@ -89,34 +61,6 @@ cd ../
 cd platform_hardware_sony_init
 git reset --hard
 git fetch sony
-if git checkout m-mr1 &&
-    git fetch sony m-mr1 &&
-    [ `git rev-list HEAD...sony/m-mr1 --count` != 0 ]
-then
-  echo 'recovery update(s) detected! Lets pull changes!'
-  git checkout sony/m-mr1
-  git branch -D m-mr1
-  git checkout -b m-mr1
-  git branch -D android-6.0
-  git checkout -b android-6.0
-  git push -f origin android-6.0
-else
-  echo 'no updates my friends!'
-fi
-if git checkout n-mr0 &&
-    git fetch sony n-mr0 &&
-    [ `git rev-list HEAD...sony/n-mr0 --count` != 0 ]
-then
-  echo 'recovery update(s) detected! Lets pull changes!'
-  git checkout sony/n-mr0
-  git branch -D n-mr0
-  git checkout -b n-mr0
-  git branch -D android-7.0
-  git checkout -b android-7.0
-  git push -f origin android-7.0
-else
-  echo 'no updates my friends!'
-fi
 if git checkout n-mr1 &&
     git fetch sony n-mr1 &&
     [ `git rev-list HEAD...sony/n-mr1 --count` != 0 ]
