@@ -2,7 +2,7 @@
 
 cd 4.4
 
-for DEVICE in sepolicy common kanuti tulip loire kugo suzu tone dora kagura keyaki yoshino maple
+for DEVICE in sepolicy common kanuti tulip loire kugo suzu tone dora kagura keyaki yoshino lilac maple poplar
 do
 cd device_sony_$DEVICE
 git reset --hard

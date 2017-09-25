@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##############
-## 7.1-3.10 ##
+##   3.10  ##
 ##############
 
 mkdir 3.10
@@ -46,7 +46,7 @@ cd ../
 cd ../
 
 ##############
-## 7.1-3.18 ##
+##   3.18  ##
 ##############
 
 mkdir 3.18
@@ -93,14 +93,14 @@ cd ../
 cd ../
 
 ##############
-## 7.1-4.4 ##
+##   4.4   ##
 ##############
 
 mkdir 4.4
 
 cd 4.4
 
-for DEVICE in sepolicy common kanuti tulip loire kugo suzu tone dora kagura keyaki yoshino maple
+for DEVICE in sepolicy common kanuti tulip loire kugo suzu tone dora kagura keyaki yoshino lilac maple poplar
 do
 
   git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/device_sony_$DEVICE && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg device_sony_$DEVICE/.git/hooks/
@@ -115,7 +115,7 @@ done
 ### A D D  R E M O T E S ###
 ############################
 
-for DEVICE in sepolicy common loire kugo suzu tone dora kagura keyaki yoshino maple
+for DEVICE in sepolicy common loire kugo suzu tone dora kagura keyaki yoshino lilac maple poplar
 do
 cd device_sony_$DEVICE
 git remote add sony https://github.com/sonyxperiadev/device-sony-$DEVICE.git
