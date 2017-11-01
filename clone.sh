@@ -106,7 +106,7 @@ do
   git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/device_sony_$DEVICE && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg device_sony_$DEVICE/.git/hooks/
 done
 
-for REPO in kernel platform_hardware_qcom_camera platform_hardware_sony_init
+for REPO in kernel platform_hardware_qcom_camera
 do
   git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/$REPO && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg $REPO/.git/hooks/
 done
@@ -130,11 +130,6 @@ cd ../
 
 cd platform_hardware_qcom_camera
 git remote add sony https://github.com/sonyxperiadev/camera.git
-git fetch sony
-cd ../
-
-cd platform_hardware_sony_init
-git remote add sony https://github.com/sonyxperiadev/device-sony-common-init.git
 git fetch sony
 cd ../
 

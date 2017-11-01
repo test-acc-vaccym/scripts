@@ -58,23 +58,4 @@ else
 fi
 cd ../
 
-cd platform_hardware_sony_init
-git reset --hard
-git fetch sony
-if git checkout n-mr1 &&
-    git fetch sony n-mr1 &&
-    [ `git rev-list HEAD...sony/n-mr1 --count` != 0 ]
-then
-  echo 'recovery update(s) detected! Lets pull changes!'
-  git checkout sony/n-mr1
-  git branch -D n-mr1
-  git checkout -b n-mr1
-  git branch -D android-7.1-4.4
-  git checkout -b android-7.1-4.4
-  git push -f origin android-7.1-4.4
-else
-  echo 'no updates my friends!'
-fi
-cd ../
-
 cd ../
