@@ -7,14 +7,14 @@ do
 cd device_sony_$DEVICE
 git reset --hard
 git fetch sony
-if git checkout n-mr1 &&
-    git fetch sony n-mr1 &&
-    [ `git rev-list HEAD...sony/n-mr1 --count` != 0 ]
+if git checkout n-mr1-legacy &&
+    git fetch sony n-mr1-legacy &&
+    [ `git rev-list HEAD...sony/n-mr1-legacy --count` != 0 ]
 then
   echo 'device update(s) detected! Lets pull changes!'
-  git checkout sony/n-mr1
-  git branch -D n-mr1
-  git checkout -b n-mr1
+  git checkout sony/n-mr1-legacy
+  git branch -D n-mr1-legacy
+  git checkout -b n-mr1-legacy
   git branch -D android-7.1-3.10
   git checkout -b android-7.1-3.10
   git push -f origin android-7.1-3.10
