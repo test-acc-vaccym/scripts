@@ -46,53 +46,6 @@ cd ../
 cd ../
 
 ##############
-##   3.18  ##
-##############
-
-mkdir 3.18
-
-cd 3.18
-
-for DEVICE in sepolicy common tone dora kagura keyaki
-do
-  git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/device_sony_$DEVICE && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg device_sony_$DEVICE/.git/hooks/
-done
-
-for REPO in kernel platform_hardware_qcom_camera platform_hardware_sony_init
-do
-  git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/$REPO && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg $REPO/.git/hooks/
-done
-
-############################
-### A D D  R E M O T E S ###
-############################
-
-for DEVICE in sepolicy common tone dora kagura keyaki
-do
-cd device_sony_$DEVICE
-git remote add sony https://github.com/sonyxperiadev/device-sony-$DEVICE.git
-git fetch sony
-cd ../
-done
-
-cd kernel
-git remote add sony https://github.com/sonyxperiadev/kernel.git
-git fetch sony
-cd ../
-
-cd platform_hardware_qcom_camera
-git remote add sony https://github.com/sonyxperiadev/camera.git
-git fetch sony
-cd ../
-
-cd platform_hardware_sony_init
-git remote add sony https://github.com/sonyxperiadev/device-sony-common-init.git
-git fetch sony
-cd ../
-
-cd ../
-
-##############
 ##   4.4   ##
 ##############
 
