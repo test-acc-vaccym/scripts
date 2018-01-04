@@ -55,7 +55,6 @@ cd 4.4
 
 for DEVICE in sepolicy common kanuti tulip loire kugo suzu tone dora kagura keyaki yoshino lilac maple poplar
 do
-
   git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/device_sony_$DEVICE && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg device_sony_$DEVICE/.git/hooks/
 done
 
@@ -68,7 +67,7 @@ done
 ### A D D  R E M O T E S ###
 ############################
 
-for DEVICE in sepolicy common loire kugo suzu tone dora kagura keyaki yoshino lilac maple poplar
+for DEVICE in sepolicy common kanuti tulip loire kugo suzu tone dora kagura keyaki yoshino lilac maple poplar
 do
 cd device_sony_$DEVICE
 git remote add sony https://github.com/sonyxperiadev/device-sony-$DEVICE.git
@@ -150,4 +149,3 @@ cd platform_packages_apps_FMRadio
 git remote add sony https://github.com/sonyxperiadev/packages-apps-FMRadio.git
 git fetch sony
 cd ../
-

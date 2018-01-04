@@ -7,14 +7,14 @@ do
 cd device_sony_$DEVICE
 git reset --hard
 git fetch sony
-if git checkout master &&
-    git fetch sony master &&
-    [ `git rev-list HEAD...sony/master --count` != 0 ]
+if git checkout o-mr0 &&
+    git fetch sony o-mr0 &&
+    [ `git rev-list HEAD...sony/o-mr0 --count` != 0 ]
 then
   echo 'device update(s) detected! Lets pull changes!'
-  git checkout sony/master
-  git branch -D master
-  git checkout -b master
+  git checkout sony/o-mr0
+  git branch -D o-mr0
+  git checkout -b o-mr0
   git branch -D android-8.0
   git checkout -b android-8.0
   git push -f origin android-8.0
