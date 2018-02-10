@@ -4,6 +4,8 @@ cd 4.4
 
 for DEVICE in sepolicy common kanuti tulip loire kugo suzu tone dora kagura keyaki yoshino lilac maple poplar
 do
+echo 'Checking for changes in '$DEVICE
+echo '\n\n'
 cd device_sony_$DEVICE
 git reset --hard
 git fetch sony

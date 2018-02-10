@@ -101,6 +101,7 @@ fi
 
 cd ../
 
+echo 'Checking for changes in platform_hardware_broadcom_fm\n\n'
 cd platform_hardware_broadcom_fm
 git reset --hard
 git fetch sony
@@ -118,6 +119,7 @@ else
 fi
 cd ../
 
+echo 'Checking for changes in platform_hardware_qcom_fm\n\n'
 cd platform_hardware_qcom_fm
 git reset --hard
 git fetch sony
@@ -135,6 +137,7 @@ else
 fi
 cd ../
 
+echo 'Checking for changes in platform_hardware_qcom_location\n\n'
 cd platform_hardware_qcom_location
 git reset --hard
 git fetch sony
@@ -152,6 +155,7 @@ else
 fi
 cd ../
 
+echo 'Checking for changes in platform_hardware_sony_fingerprint\n\n'
 cd platform_hardware_sony_fingerprint
 git reset --hard
 git fetch sony
@@ -159,7 +163,7 @@ if git checkout master &&
     git fetch sony master &&
     [ `git rev-list HEAD...sony/master --count` != 0 ]
 then
-  echo 'data services update(s) detected! Lets pull changes!'
+  echo 'fingerprint update(s) detected! Lets pull changes!'
   git checkout sony/master
   git branch -D master
   git checkout -b master
@@ -169,6 +173,7 @@ else
 fi
 cd ../
 
+echo 'Checking for changes in platform_hardware_sony_dataservices\n\n'
 cd platform_hardware_sony_dataservices
 git reset --hard
 git fetch sony
@@ -186,6 +191,7 @@ else
 fi
 cd ../
 
+echo 'Checking for changes in platform_hardware_sony_macaddrsetup\n\n'
 cd platform_hardware_sony_macaddrsetup
 git reset --hard
 git fetch sony
@@ -203,6 +209,7 @@ else
 fi
 cd ../
 
+echo 'Checking for changes in platform_hardware_sony_thermanager\n\n'
 cd platform_hardware_sony_thermanager
 git reset --hard
 git fetch sony
@@ -220,6 +227,7 @@ else
 fi
 cd ../
 
+echo 'Checking for changes in platform_hardware_sony_timekeep\n\n'
 cd platform_hardware_sony_timekeep
 git reset --hard
 git fetch sony
@@ -237,6 +245,7 @@ else
 fi
 cd ../
 
+echo 'Checking for changes in platform_packages_apps_ExtendedSettings\n\n'
 cd platform_packages_apps_ExtendedSettings
 git reset --hard
 git fetch sony
@@ -254,6 +263,7 @@ else
 fi
 cd ../
 
+echo 'Checking for changes in platform_packages_apps_FMRadio\n\n'
 cd platform_packages_apps_FMRadio
 git reset --hard
 git fetch sony
