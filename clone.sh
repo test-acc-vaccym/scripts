@@ -11,7 +11,7 @@ do
   git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/device_sony_$DEVICE && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg device_sony_$DEVICE/.git/hooks/
 done
 
-for REPO in kernel platform_hardware_qcom_camera platform_hardware_sony_init
+for REPO in platform_hardware_sony_init
 do
   git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/$REPO && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg $REPO/.git/hooks/
 done
@@ -27,16 +27,6 @@ git remote add sony https://github.com/sonyxperiadev/device-sony-$DEVICE.git
 git fetch sony
 cd ../
 done
-
-cd kernel
-git remote add sony https://github.com/sonyxperiadev/kernel.git
-git fetch sony
-cd ../
-
-cd platform_hardware_qcom_camera
-git remote add sony https://github.com/sonyxperiadev/camera.git
-git fetch sony
-cd ../
 
 cd platform_hardware_sony_init
 git remote add sony https://github.com/sonyxperiadev/device-sony-common-init.git
@@ -58,11 +48,6 @@ do
   git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/device_sony_$DEVICE && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg device_sony_$DEVICE/.git/hooks/
 done
 
-for REPO in kernel platform_hardware_qcom_camera
-do
-  git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/$REPO && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg $REPO/.git/hooks/
-done
-
 ############################
 ### A D D  R E M O T E S ###
 ############################
@@ -75,6 +60,22 @@ git fetch sony
 cd ../
 done
 
+
+cd ../
+
+###################
+## G E N E R I C ##
+###################
+
+for REPO in kernel platform_hardware_qcom_camera platform_hardware_broadcom_fm platform_hardware_qcom_fm platform_hardware_qcom_location platform_hardware_sony_fingerprint platform_hardware_sony_dataservices platform_hardware_sony_macaddrsetup platform_hardware_sony_thermanager platform_hardware_sony_timekeep platform_packages_apps_ExtendedSettings platform_packages_apps_FMRadio
+do
+  git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/$REPO && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg $REPO/.git/hooks/
+done
+
+############################
+### A D D  R E M O T E S ###
+############################
+
 cd kernel
 git remote add sony https://github.com/sonyxperiadev/kernel.git
 git fetch sony
@@ -84,21 +85,6 @@ cd platform_hardware_qcom_camera
 git remote add sony https://github.com/sonyxperiadev/camera.git
 git fetch sony
 cd ../
-
-cd ../
-
-###################
-## G E N E R I C ##
-###################
-
-for REPO in platform_hardware_broadcom_fm platform_hardware_qcom_fm platform_hardware_qcom_location platform_hardware_sony_fingerprint platform_hardware_sony_dataservices platform_hardware_sony_macaddrsetup platform_hardware_sony_thermanager platform_hardware_sony_timekeep platform_packages_apps_ExtendedSettings platform_packages_apps_FMRadio
-do
-  git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/$REPO && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg $REPO/.git/hooks/
-done
-
-############################
-### A D D  R E M O T E S ###
-############################
 
 cd platform_hardware_broadcom_fm
 git remote add sony https://github.com/sonyxperiadev/vendor-broadcom-bt-fm.git
