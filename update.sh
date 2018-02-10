@@ -4,7 +4,7 @@ cd kernel
 echo 'Check for kernel updates'\n\n
 git reset --hard
 ## Remove all files and reset it hard again.
-rm-rf * && git reset --hard
+rm -rf * && git reset --hard
 git fetch sony
 
 echo 'Yo. I am checking aosp/LA.BR.1.3.3_rb2.14 branch\n\n' 
@@ -55,7 +55,7 @@ cd platform_hardware_qcom_camera
 echo 'Check for camera updates\n\n'
 git reset --hard
 ## Remove all files and reset it hard again.
-rm-rf * && git reset --hard
+rm -rf * && git reset --hard
 git fetch sony
 echo 'Yo. I am checking aosp/LA.BR.1.3.3_rb2.14 branch\n\n'
 if git checkout aosp/LA.BR.1.3.3_rb2.14 &&
