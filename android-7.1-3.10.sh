@@ -5,7 +5,8 @@ cd 3.10
 for DEVICE in sepolicy common rhine amami honami togari shinano castor castor_windy sirius aries leo scorpion scorpion_windy kanuti tulip kitakami ivy karin karin_windy satsuki sumire suzuran
 do
 echo 'Checking for changes in '$DEVICE
-echo '\n\n'
+
+
 cd device_sony_$DEVICE
 git reset --hard
 git fetch sony
@@ -29,7 +30,7 @@ done
 for DEVICE_LEGACY in loire kugo suzu
 do
 echo 'Checking for changes in '$DEVICE_LEGACY
-echo '\n\n'
+
 cd device_sony_$DEVICE_LEGACY
 git reset --hard
 git fetch sony
@@ -50,7 +51,8 @@ fi
 cd ../
 done
 
-echo 'Checking for changes in platform_hardware_sony_init\n\n'
+echo 'Checking for changes in platform_hardware_sony_init\'
+
 cd platform_hardware_sony_init
 git reset --hard
 git fetch sony
