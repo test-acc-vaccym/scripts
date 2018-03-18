@@ -141,15 +141,58 @@ echo 'Checking for changes in platform_hardware_qcom_location\n\n'
 cd platform_hardware_qcom_location
 git reset --hard
 git fetch sony
-if git checkout master &&
-    git fetch sony master &&
-    [ `git rev-list HEAD...sony/master --count` != 0 ]
+if git checkout o-mr1 &&
+    git fetch sony o-mr1 &&
+    [ `git rev-list HEAD...sony/o-mr1 --count` != 0 ]
 then
   echo 'qcom location driver update(s) detected! Lets pull changes!'
-  git checkout sony/master
-  git branch -D master
-  git checkout -b master
-  git push -f origin master
+  git checkout sony/o-mr1
+  git branch -D android-8.1
+  git branch -D android-8.0
+  git checkout -b android-8.1
+  git checkout -b android-8.0
+  git push -f origin android-8.1
+  git push -f origin android-8.0
+else
+  echo 'no updates my friends!'
+fi
+cd ../
+
+cd platform_hardware_qcom_location
+git reset --hard
+git fetch sony
+if git checkout n-mr1 &&
+    git fetch sony n-mr1 &&
+    [ `git rev-list HEAD...sony/n-mr1 --count` != 0 ]
+then
+  echo 'qcom location driver update(s) detected! Lets pull changes!'
+  git checkout sony/n-mr1
+  git branch -D android-7.1-4.4
+  git checkout -b android-7.1-4.4
+  git push -f origin android-7.1-4.4
+else
+  echo 'no updates my friends!'
+fi
+cd ../
+
+cd platform_hardware_qcom_location
+git reset --hard
+git fetch sony
+if git checkout m-mr1 &&
+    git fetch sony m-mr1 &&
+    [ `git rev-list HEAD...sony/m-mr1 --count` != 0 ]
+then
+  echo 'qcom location driver update(s) detected! Lets pull changes!'
+  git checkout sony/m-mr1
+  git branch -D android-6.0
+  git branch -D android-7.0
+  git branch -D android-7.1-3.10
+  git checkout -b android-6.0
+  git checkout -b android-7.0
+  git checkout -b android-7.1-3.10
+  git push -f origin android-6.0
+  git push -f origin android-7.0
+  git push -f origin android-7.1-3.10
 else
   echo 'no updates my friends!'
 fi
