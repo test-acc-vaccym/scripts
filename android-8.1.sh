@@ -2,7 +2,7 @@
 
 cd 4.4
 
-for DEVICE in sepolicy common kanuti tulip loire kugo suzu tone dora kagura keyaki yoshino lilac maple poplar nile pioneer discovery
+for DEVICE in sepolicy common loire blanc kugo suzu tone dora kagura keyaki yoshino lilac maple poplar nile pioneer discovery
 do
 echo 'Checking for changes in '$DEVICE
 
