@@ -3,9 +3,12 @@
 cd kernel
 echo 'Check for kernel updates'\n\n
 git reset --hard
+
 ## Remove all files and reset it hard again.
 rm -rf * && git reset --hard
 git fetch sony
+
+## Kernel 4.4
 echo 'Yo. I am checking aosp/LA.UM.6.4.r1 branch\n\n'
 if git checkout aosp/LA.UM.6.4.r1 &&
     git fetch sony aosp/LA.UM.6.4.r1 &&
@@ -19,14 +22,33 @@ then
 else
   echo 'no updates my friends!'
 fi
+
+## Kernel 4.9
+echo 'Yo. I am checking aosp/LA.UM.6.4.r1 branch\n\n'
+if git checkout aosp/LA.UM.6.3.r1 &&
+    git fetch sony aosp/LA.UM.6.3.r1 &&
+    [ `git rev-list HEAD...sony/aosp/LA.UM.6.3.r1 --count` != 0 ]
+then
+  echo 'kernel update(s) detected! Lets pull changes!'
+  git checkout sony/aosp/LA.UM.6.3.r1
+  git branch -D aosp/LA.UM.6.3.r1
+  git checkout -b aosp/LA.UM.6.3.r1
+  git push -f origin aosp/LA.UM.6.3.r1
+else
+  echo 'no updates my friends!'
+fi
+
 cd ../
 
 cd platform_hardware_qcom_camera
 echo 'Check for camera updates\n\n'
 git reset --hard
+
 ## Remove all files and reset it hard again.
 rm -rf * && git reset --hard
 git fetch sony
+
+## Camera 4.4
 echo 'Yo. I am checking aosp/LA.UM.6.4.r1 branch\n\n'
 if git checkout aosp/LA.UM.6.4.r1 &&
     git fetch sony aosp/LA.UM.6.4.r1 &&
@@ -40,6 +62,22 @@ then
 else
   echo 'no updates my friends!'
 fi
+
+## Camera 4.9
+echo 'Yo. I am checking aosp/LA.UM.6.3.r1 branch\n\n'
+if git checkout aosp/LA.UM.6.3.r1 &&
+    git fetch sony aosp/LA.UM.6.3.r1 &&
+    [ `git rev-list HEAD...sony/aosp/LA.UM.6.3.r1 --count` != 0 ]
+then
+  echo 'camera update(s) detected! Lets pull changes!'
+  git checkout sony/aosp/LA.UM.6.3.r1
+  git branch -D aosp/LA.UM.6.3.r1
+  git checkout -b aosp/LA.UM.6.3.r1
+  git push -f origin aosp/LA.UM.6.3.r1
+else
+  echo 'no updates my friends!'
+fi
+
 cd ../
 
 echo 'Checking for changes in platform_hardware_qcom_location\n\n'
