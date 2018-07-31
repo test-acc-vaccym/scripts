@@ -24,16 +24,16 @@ else
 fi
 
 ## Kernel 4.9
-echo 'Yo. I am checking aosp/LA.UM.6.4.r1 branch\n\n'
-if git checkout aosp/LA.UM.6.3.r1 &&
-    git fetch sony aosp/LA.UM.6.3.r1 &&
-    [ `git rev-list HEAD...sony/aosp/LA.UM.6.3.r1 --count` != 0 ]
+echo 'Yo. I am checking aosp/LE.UM.2.3.2.r1.4 branch\n\n'
+if git checkout aosp/LE.UM.2.3.2.r1.4 &&
+    git fetch sony aosp/LE.UM.2.3.2.r1.4 &&
+    [ `git rev-list HEAD...sony/aosp/LE.UM.2.3.2.r1.4 --count` != 0 ]
 then
   echo 'kernel update(s) detected! Lets pull changes!'
-  git checkout sony/aosp/LA.UM.6.3.r1
-  git branch -D aosp/LA.UM.6.3.r1
-  git checkout -b aosp/LA.UM.6.3.r1
-  git push -f origin aosp/LA.UM.6.3.r1
+  git checkout sony/aosp/LE.UM.2.3.2.r1.4
+  git branch -D aosp/LE.UM.2.3.2.r1.4
+  git checkout -b aosp/LE.UM.2.3.2.r1.4
+  git push -f origin aosp/LE.UM.2.3.2.r1.4
 else
   echo 'no updates my friends!'
 fi
@@ -64,19 +64,19 @@ else
 fi
 
 ## Camera 4.9
-echo 'Yo. I am checking aosp/LA.UM.6.3.r1 branch\n\n'
-if git checkout aosp/LA.UM.6.3.r1 &&
-    git fetch sony aosp/LA.UM.6.3.r1 &&
-    [ `git rev-list HEAD...sony/aosp/LA.UM.6.3.r1 --count` != 0 ]
-then
-  echo 'camera update(s) detected! Lets pull changes!'
-  git checkout sony/aosp/LA.UM.6.3.r1
-  git branch -D aosp/LA.UM.6.3.r1
-  git checkout -b aosp/LA.UM.6.3.r1
-  git push -f origin aosp/LA.UM.6.3.r1
-else
-  echo 'no updates my friends!'
-fi
+#echo 'Yo. I am checking aosp/LE.UM.2.3.2.r1.4 branch\n\n'
+#if git checkout aosp/LE.UM.2.3.2.r1.4 &&
+#    git fetch sony aosp/LE.UM.2.3.2.r1.4 &&
+#    [ `git rev-list HEAD...sony/aosp/LE.UM.2.3.2.r1.4 --count` != 0 ]
+#then
+#  echo 'camera update(s) detected! Lets pull changes!'
+#  git checkout sony/aosp/LE.UM.2.3.2.r1.4
+#  git branch -D aosp/LE.UM.2.3.2.r1.4
+#  git checkout -b aosp/LE.UM.2.3.2.r1.4
+#  git push -f origin aosp/LE.UM.2.3.2.r1.4
+#else
+#  echo 'no updates my friends!'
+#fi
 
 cd ../
 
