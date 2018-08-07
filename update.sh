@@ -91,8 +91,11 @@ then
   echo 'qcom location driver update(s) detected! Lets pull changes!'
   git checkout sony/o-mr1
   git branch -D android-8.1
+  git branch -D android-9.0
   git checkout -b android-8.1
+  git checkout -b android-9.0
   git push -f origin android-8.1
+  git push -f origin android-9.0
 else
   echo 'no updates my friends!'
 fi
