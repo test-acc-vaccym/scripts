@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for DEVICE in sepolicy common loire blanc kugo suzu tone dora kagura keyaki yoshino lilac maple poplar nile pioneer discovery tama akari apollo
+for DEVICE in sepolicy common loire blanc kugo suzu tone dora kagura keyaki yoshino lilac maple poplar nile pioneer discovery voyager tama akari apollo
 do
 echo 'Checking for changes in '$DEVICE
 

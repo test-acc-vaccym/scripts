@@ -4,7 +4,7 @@
 ## Devices  ##
 ##############
 
-for DEVICE in sepolicy common loire blanc kugo suzu tone dora kagura keyaki yoshino lilac maple poplar nile pioneer discovery tama akari apollo
+for DEVICE in sepolicy common loire blanc kugo suzu tone dora kagura keyaki yoshino lilac maple poplar nile pioneer discovery voyager tama akari apollo
 do
   git clone ssh://erikcas@review.sonyaosp.org:29418/SonyAosp/device_sony_$DEVICE && scp -p -P 29418 erikcas@review.sonyaosp.org:hooks/commit-msg device_sony_$DEVICE/.git/hooks/
 done
@@ -13,7 +13,7 @@ done
 ### A D D  R E M O T E S ###
 ############################
 
-for DEVICE in sepolicy common loire blanc kugo suzu tone dora kagura keyaki yoshino lilac maple poplar nile pioneer discovery tama akari apollo
+for DEVICE in sepolicy common loire blanc kugo suzu tone dora kagura keyaki yoshino lilac maple poplar nile pioneer discovery voyager tama akari apollo
 do
 cd device_sony_$DEVICE
 git remote add sony https://github.com/sonyxperiadev/device-sony-$DEVICE.git
