@@ -80,10 +80,16 @@ fi
 
 cd ../
 
-echo 'Checking for changes in platform_hardware_qcom_location\n\n'
 cd platform_hardware_qcom_location
 git reset --hard
 git fetch sony
+
+## Remove all files and reset it hard again.
+rm -rf * && git reset --hard
+git fetch sony
+
+## Location 4.4
+echo 'Checking for changes in platform_hardware_qcom_location\n\n'
 if git checkout o-mr1 &&
     git fetch sony o-mr1 &&
     [ `git rev-list HEAD...sony/o-mr1 --count` != 0 ]
@@ -91,20 +97,37 @@ then
   echo 'qcom location driver update(s) detected! Lets pull changes!'
   git checkout sony/o-mr1
   git branch -D android-8.1
-  git branch -D android-9.0
   git checkout -b android-8.1
-  git checkout -b android-9.0
   git push -f origin android-8.1
+else
+  echo 'no updates my friends!'
+fi
+
+## Location 4.9
+echo 'Checking for changes in platform_hardware_qcom_location\n\n'
+if git checkout p-mr0 &&
+    git fetch sony p-mr0 &&
+    [ `git rev-list HEAD...sony/p-mr0 --count` != 0 ]
+then
+  echo 'qcom location driver update(s) detected! Lets pull changes!'
+  git checkout sony/p-mr0
+  git branch -D android-9.0
+  git checkout -b android-9.0
   git push -f origin android-9.0
 else
   echo 'no updates my friends!'
 fi
 cd ../
 
-echo 'Checking for changes in platform_hardware_sony_fingerprint\n\n'
 cd platform_hardware_sony_fingerprint
 git reset --hard
 git fetch sony
+
+## Remove all files and reset it hard again.
+rm -rf * && git reset --hard
+git fetch sony
+
+echo 'Checking for changes in platform_hardware_sony_fingerprint\n\n'
 if git checkout master &&
     git fetch sony master &&
     [ `git rev-list HEAD...sony/master --count` != 0 ]
@@ -119,10 +142,15 @@ else
 fi
 cd ../
 
-echo 'Checking for changes in platform_hardware_sony_dataservices\n\n'
 cd platform_hardware_sony_dataservices
 git reset --hard
 git fetch sony
+
+## Remove all files and reset it hard again.
+rm -rf * && git reset --hard
+git fetch sony
+
+echo 'Checking for changes in platform_hardware_sony_dataservices\n\n'
 if git checkout master &&
     git fetch sony master &&
     [ `git rev-list HEAD...sony/master --count` != 0 ]
@@ -137,10 +165,15 @@ else
 fi
 cd ../
 
-echo 'Checking for changes in platform_hardware_sony_macaddrsetup\n\n'
 cd platform_hardware_sony_macaddrsetup
 git reset --hard
 git fetch sony
+
+## Remove all files and reset it hard again.
+rm -rf * && git reset --hard
+git fetch sony
+
+echo 'Checking for changes in platform_hardware_sony_macaddrsetup\n\n'
 if git checkout master &&
     git fetch sony master &&
     [ `git rev-list HEAD...sony/master --count` != 0 ]
@@ -155,10 +188,15 @@ else
 fi
 cd ../
 
-echo 'Checking for changes in platform_hardware_sony_thermanager\n\n'
 cd platform_hardware_sony_thermanager
 git reset --hard
 git fetch sony
+
+## Remove all files and reset it hard again.
+rm -rf * && git reset --hard
+git fetch sony
+
+echo 'Checking for changes in platform_hardware_sony_thermanager\n\n'
 if git checkout master &&
     git fetch sony master &&
     [ `git rev-list HEAD...sony/master --count` != 0 ]
@@ -173,10 +211,15 @@ else
 fi
 cd ../
 
-echo 'Checking for changes in platform_hardware_sony_timekeep\n\n'
 cd platform_hardware_sony_timekeep
 git reset --hard
 git fetch sony
+
+## Remove all files and reset it hard again.
+rm -rf * && git reset --hard
+git fetch sony
+
+echo 'Checking for changes in platform_hardware_sony_timekeep\n\n'
 if git checkout master &&
     git fetch sony master &&
     [ `git rev-list HEAD...sony/master --count` != 0 ]
@@ -191,10 +234,15 @@ else
 fi
 cd ../
 
-echo 'Checking for changes in platform_packages_apps_ExtendedSettings\n\n'
 cd platform_packages_apps_ExtendedSettings
 git reset --hard
 git fetch sony
+
+## Remove all files and reset it hard again.
+rm -rf * && git reset --hard
+git fetch sony
+
+echo 'Checking for changes in platform_packages_apps_ExtendedSettings\n\n'
 if git checkout master &&
     git fetch sony master &&
     [ `git rev-list HEAD...sony/master --count` != 0 ]
